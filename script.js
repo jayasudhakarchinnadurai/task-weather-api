@@ -17,12 +17,8 @@ async function api(){
         lon=i.latlng[1]
         data_count.setAttribute('lat',lat)
         data_count.setAttribute('lon',lon)
-        
-
-        
         data_count.classList.add('country_data')
         data_count.style.display='inline-block'
-
         api_data.append(data_count)
 
         var country_name=document.createElement('p')
@@ -56,17 +52,13 @@ async function api(){
        country_code.classList.add('child1')
        data_count.append(country_code)
 
-     var country_weather=document.createElement('button')
-     country_weather.classList.add('center')
-     country_weather.setAttribute('onclick','weatherapi(this)')
-     country_weather.innerText='click for weather'
-    data_count.append(country_weather)
+      var country_weather=document.createElement('button')
+      country_weather.classList.add('center')
+      country_weather.setAttribute('onclick','weatherapi(this)')
+      country_weather.innerText='click for weather'
+      data_count.append(country_weather)
 
-    
-     
-
-
-    }
+}
     
    } catch {
     
@@ -102,12 +94,6 @@ var weather=document.createElement('p')
 weather.style.color='white'
 weather.innerText=`Description:${out1.weather[0]. description}`
 show.append(weather)
-
-console.log(out1.weather[0]. description)
-
-    
- 
-
 
 }
 
